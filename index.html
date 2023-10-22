@@ -168,7 +168,7 @@
     <script>
       window.setInterval(function() {
         $.getJSON('https://nextpage.pythonanywhere.com/get', function(data) {
-          if (data.refresh === 1) {
+          if (JSON.parse(data).refresh === 1) {
             document.getElementById('status').innerHTML = "Ready"
             document.getElementById('status').style.color = "#16db51"
             document.getElementById('grab-order').hidden = true
